@@ -1,0 +1,5 @@
+version: "3.2"
+services:
+    bitkub-websocket:
+        image: bitkub-websocket:1.0.0
+        container_name: bitkub-websocket
