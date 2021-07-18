@@ -1,5 +1,9 @@
 package bitkub
 
+type BitkubWebsocket struct {
+	Stream string `json:"stream" example:"market.ticker.thb_btc"`
+}
+
 type TickerMarketWebsocket struct {
 	Stream         string  `json:"stream" example:"market.ticker.thb_btc"`
 	ID             int     `json:"id" example:"1"`
@@ -17,4 +21,15 @@ type TickerMarketWebsocket struct {
 	Low24Hr        float64 `json:"low24hr" example:"1060065.78"`
 	Open           float64 `json:"open" example:"1064700.05"`
 	Close          float64 `json:"close" example:"1065201"`
+}
+
+type TradeMarketWebsocket struct {
+	Stream    string  `json:"stream" example:"market.trade.thb_btc"`
+	Symbol    string  `json:"sym" example:"THB_ETH"`
+	Txn       string  `json:"txn" example:"ETHSELL0000074282"`
+	Rate      float64 `json:"rat" example:"5977.00"`
+	Amount    float64 `json:"amt" example:"1.556539"`
+	Buy       int     `json:"bid" example:"2048451"`
+	Sell      int     `json:"sid" example:"2924729"`
+	Timestamp int     `json:"ts" example:"1542268567"`
 }
